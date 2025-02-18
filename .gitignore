@@ -6,3 +6,5 @@ __pycache__/
 venv/
 datasets/korean
 datasets/korean_extracted
+datasets/korean_sample.csv
+datasets/temp
