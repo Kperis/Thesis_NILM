@@ -4,4 +4,5 @@ __pycache__/
 .idea/
 .DS_Store
 venv/
-datasets/
+datasets/korean
+datasets/korean_extracted
