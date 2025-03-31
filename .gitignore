@@ -8,3 +8,7 @@ datasets/korean
 datasets/korean_extracted
 datasets/korean_sample.csv
 datasets/temp
+datasets/madalena_processed_30min
+datasets/eoh_cleaned_half_hourly.csv
+datasets/german_heat_pump.csv
+datasets/German/German_15min.hdf5
