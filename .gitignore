@@ -12,3 +12,6 @@ datasets/madalena_processed_30min
 datasets/eoh_cleaned_half_hourly.csv
 datasets/german_heat_pump.csv
 datasets/German/German_15min.hdf5
+datasets/retrofit/*
+!datasets/retrofit/resampled
+!datasets/retrofit/resampled/** 
