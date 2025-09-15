@@ -1,0 +1,18 @@
+{
+  "input_cols": [
+    "AH",
+    "AH_lag1",
+    "AH_lag2",
+    "AH_lag3",
+    "Tin",
+    "Tout",
+    "AH_out",
+    "hvac_mode",
+    "on_runtime_1h",
+    "is_trans",
+    "hour_sin",
+    "hour_cos",
+    "month_sin",
+    "month_cos"
+  ]
+}

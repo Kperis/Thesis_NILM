@@ -15,3 +15,6 @@ datasets/German/German_15min.hdf5
 datasets/retrofit/*
 !datasets/retrofit/resampled
 !datasets/retrofit/resampled/** 
+cache/
+analysis/
+ga_cache_json/

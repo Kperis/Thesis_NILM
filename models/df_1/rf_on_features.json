@@ -1,0 +1,17 @@
+{
+  "features": [
+    "Tin",
+    "Tout",
+    "T_diff",
+    "Tin_diff",
+    "Tout_diff",
+    "Tin_ma3",
+    "Tout_ma3",
+    "hour_sin",
+    "hour_cos",
+    "Tout_fut1",
+    "SW_down",
+    "SW1h",
+    "SW3h"
+  ]
+}
