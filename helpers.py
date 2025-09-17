@@ -512,15 +512,7 @@ def load_models_and_scalers(
     ResTCNRegressor=None,       # ⬅️ use the new class
     res_tcn_kwargs: dict | None = None        # pass class
 ):
-    """
-    Loads:
-      - RH model from:    models/df_{idx}/best_rh.pt
-      - TCN (Tin-OFF):    models/df_{idx}/best_tinv2.pt
-      - RF  (Tin-ON):     models/df_{idx}/best_model_rf.pkl
-      - RH scaler:        models/scalers/df_{idx}/scaler_rh.pkl
-      - TCN scaler (Tin): models/scalers/df_{idx}/scaler_tin.pkl
-    Instantiates torch models with correct input sizes.
-    """
+  
     mdir = model_dir_tpl.format(idx=df_index)
     sdir = scaler_dir_tpl.format(idx=df_index)
     ah_obj = joblib.load(os.path.join(sdir, "scaler_ah.pkl"))
@@ -555,9 +547,9 @@ def load_models_and_scalers(
     if not ah_trained or not all(isinstance(c, str) for c in ah_trained):
         raise ValueError(f"{ah_feat_json} does not contain a valid list of feature names.")
     # OFF (Tin)
-    _tin_obj = joblib.load(os.path.join(sdir, "scaler_tin.pkl"))  # <-- name aligned to OFF
+    _tin_obj = joblib.load(os.path.join(sdir, "scaler_tin.pkl"))  
     if not isinstance(_tin_obj, dict) or "feature_order" not in _tin_obj:
-        raise ValueError("scaler_tin_off.pkl must be a dict with {'scaler', 'feature_order'}. Re-save from training.")
+        raise ValueError("scaler_tin.pkl must be a dict with {'scaler', 'feature_order'}. Re-save from training.")
     tin_scaler = _tin_obj["scaler"]
     tin_off_trained = list(_tin_obj["feature_order"])
 
@@ -753,9 +745,7 @@ def forecast_next_96(
     loaded_dict = None,
     model_dir_tpl: str = "models/df_{idx}",
     scaler_dir_tpl: str = "models/scalers/df_{idx}",
-    # For torch
     device: str = "cuda" if torch.cuda.is_available() else "cpu",
-    # Classes for optional loading
     CNNLSTMWithFuture=None,
     ResTCNRegressor=None,            # ⬅️ new param
     res_tcn_kwargs: dict | None = None,
