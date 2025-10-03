@@ -1,0 +1,2 @@
+house_idx,day_no,start_idx,pv_minutes_total,pv_overlap_minutes_suggested,pv_overlap_minutes_gt,pv_overlap_minutes_delta,pv_overlap_minutes_pct_change_vs_gt,pv_overlap_pct_suggested,pv_overlap_pct_gt,pv_overlap_pct_delta_abs_points,pv_overlap_pct_change_vs_gt,avg_daily_comfort_suggested,avg_daily_comfort_gt,avg_daily_comfort_delta
+3,3,12480,525,525,525,0,0.0,100.0,100.0,0.0,0.0,88.25520833333333,94.84791666666666,-6.592708333333334
